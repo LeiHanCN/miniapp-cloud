@@ -1,4 +1,4 @@
-
+export { App } from './types'
 declare global {
-	const use: (key: string) => void
+  const use: <T = any>(key: string) => T
 }
