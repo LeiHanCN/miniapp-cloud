@@ -2,8 +2,10 @@
   "name": "miniapp-cloud",
   "version": "1.0.0",
   "description": "微信小程序云开发框架",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "node_modules/typescript/bin/tsc",
+    "start": "yarn build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -14,10 +16,18 @@
     "miniapp",
     "cloud"
   ],
-  "author": "LeiHanCN",
+  "types": "index.d.ts",
+  "author": "LeiHanCN <leihanchenzhou@outlook.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/LeiHanCN/miniapp-cloud/issues"
   },
-  "homepage": "https://github.com/LeiHanCN/miniapp-cloud#readme"
+  "homepage": "https://github.com/LeiHanCN/miniapp-cloud#readme",
+  "dependencies": {
+    "wx-server-sdk": "^1.8.0"
+  },
+  "devDependencies": {
+    "@types/wx-server-sdk": "^0.8.0",
+    "typescript": "^3.7.5"
+  }
 }
