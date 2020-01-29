@@ -21,7 +21,7 @@ export class App implements AppInterface {
     this.$container.register('routes', new Routes())
   }
 
-  get $routes() {
+  protected get $routes() {
     return this.$container.resolve<Routes>('routes')
   }
 
