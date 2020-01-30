@@ -1,4 +1,4 @@
-import { HandlerContext, HandlerEvent, NativeHandlerOptions } from './wx-sdk'
+import { HandlerContext, HandlerEvent, NativeHandlerOptions } from 'wx-sdk'
 
 export type RouteHandler = (
   event: HandlerEvent,

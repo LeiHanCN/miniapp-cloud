@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "node_modules/typescript/bin/tsc",
-    "start": "yarn build --watch",
+    "dev": "yarn build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
