@@ -7,7 +7,7 @@ import {
   RouteHandlerContext,
   RouteHandlerEvent,
   RouteHandlerEventTypes
-} from '../types/index'
+} from '../types'
 import Routes from './Routes'
 
 export default class App implements AppInterface {
