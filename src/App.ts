@@ -30,13 +30,15 @@ export default class App implements AppInterface {
   }
 
   async handle(event: RouteHandlerEvent, context: RouteHandlerContext) {
-    switch (event.type) {
-      case RouteHandlerEventTypes.TIMER:
-        // do something schedule task.
-        break
-      default:
-        await this.$routes.dispatch({ event, context })
-        break
+    if (event.type === RouteHandlerEventTypes.TIMER) {
+      console.log(`> 执行定时任务：${event}`)
+      // @todo 定时任务
+      return
     }
+
+    console.group(`> 执行 API：${event.$api}`)
+    console.log('> event: ', event, ' context: ', context)
+    console.groupEnd()
+    await this.$routes.dispatch({ event, context })
   }
 }
