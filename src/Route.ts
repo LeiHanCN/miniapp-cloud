@@ -4,10 +4,6 @@ import {
   RouteHandlerNativeOptions
 } from '../types'
 
-export enum RouteHandlerEventTypes {
-  TIMER = 'Timer'
-}
-
 export default class Route implements RouteInterface {
   constructor(protected $handler: RouteHandler) {}
 

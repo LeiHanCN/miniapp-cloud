@@ -1,3 +1,6 @@
+export enum RouteHandlerEventTypes {
+  TIMER = 'Timer'
+}
 
 export interface RouteHandlerEvent {
   $api: string

@@ -5,10 +5,10 @@ import {
   AppConstructorOptions,
   RouteHandler,
   RouteHandlerContext,
-  RouteHandlerEvent
-} from '../types'
+  RouteHandlerEvent,
+  RouteHandlerEventTypes
+} from '../types/index'
 import Routes from './Routes'
-import { RouteHandlerEventTypes } from './Route'
 
 export default class App implements AppInterface {
   protected $container = Container.getInstance()
