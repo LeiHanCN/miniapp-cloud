@@ -9,9 +9,11 @@ type AppConstructorOptions =
     }
 
 interface App {
-  new? (env?: AppConstructorOptions): App
   route: (path: string, handler: RouteHandler) => void
   handle: (event: RouteHandlerEvent, context: RouteHandlerContext) => void
 }
+interface AppConstructor {
+  new (env?: AppConstructorOptions): App
+}
 
-export const App: App
+export const App: AppConstructor
