@@ -10,6 +10,7 @@ export type AppConstructorOptions =
     }
 
 export interface App {
+  new(env?: AppConstructorOptions): App
   route: (path: string, handler: RouteHandler) => void
   handle: (event: HandlerEvent, context: HandlerContext) => void
 }
