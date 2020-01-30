@@ -1,8 +1,6 @@
-import { App as AppType } from './types'
+import { App } from './types'
 
-const App: AppType
 export default App
-
 declare global {
   const use: <T = any>(key: string) => T
 }
