@@ -1,5 +1,5 @@
 import { RouteHandler } from './Route'
-import { HandlerContext, HandlerEvent } from 'wx-sdk'
+import { HandlerContext, HandlerEvent } from './wx-sdk'
 
 type AppConstructorOptions =
   | string
