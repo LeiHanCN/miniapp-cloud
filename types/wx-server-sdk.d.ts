@@ -1,4 +1,4 @@
-declare module 'wx-sdk' {
+declare module 'wx-server-sdk' {
   export * from '@types/wx-server-sdk'
 
   export enum HandlerEventTypes {
