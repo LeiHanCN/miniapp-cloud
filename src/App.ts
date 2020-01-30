@@ -1,16 +1,16 @@
-import cloud from 'wx-server-sdk'
+import * as cloud from 'wx-server-sdk'
 import { Container } from './Container'
 import {
   App as AppInterface,
   AppConstructorOptions,
   RouteHandler,
   RouteHandlerContext,
-  RouteHandlerEvent,
-  RouteHandlerEventTypes
+  RouteHandlerEvent
 } from '../types'
 import Routes from './Routes'
+import { RouteHandlerEventTypes } from './Route'
 
-export class App implements AppInterface {
+export default class App implements AppInterface {
   protected $container = Container.getInstance()
 
   constructor(env: AppConstructorOptions = cloud.DYNAMIC_CURRENT_ENV) {
