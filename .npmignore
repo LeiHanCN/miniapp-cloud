@@ -3,3 +3,5 @@
 tsconfig.json
 yarn-error.log
 LICENSE
+.idea/
+.vscode/
