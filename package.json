@@ -1,6 +1,6 @@
 {
   "name": "miniapp-cloud",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "微信小程序云开发框架",
   "main": "dist/index.js",
   "scripts": {
