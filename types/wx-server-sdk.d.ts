@@ -1,5 +1,4 @@
-
-declare module 'wx-server-sdk' {
+declare module 'wx-sdk' {
   export * from '@types/wx-server-sdk'
 
   export enum HandlerEventTypes {
@@ -15,6 +14,4 @@ declare module 'wx-server-sdk' {
     event: HandlerEvent
     context: HandlerContext
   }
-
 }
-

@@ -1,4 +1,4 @@
-import {HandlerContext, HandlerEvent, NativeHandlerOptions} from 'wx-server-sdk'
+import { HandlerContext, HandlerEvent, NativeHandlerOptions } from 'wx-sdk'
 
 export type RouteHandler = (
   event: HandlerEvent,
@@ -6,5 +6,5 @@ export type RouteHandler = (
 ) => void
 
 export interface Route {
-	run: (nativeHandlerOptions: NativeHandlerOptions) => void
+  run: (nativeHandlerOptions: NativeHandlerOptions) => void
 }

@@ -1,5 +1,5 @@
-import { NativeHandlerOptions } from 'wx-server-sdk'
-import {RouteHandler} from "./Route";
+import { NativeHandlerOptions } from 'wx-sdk'
+import { RouteHandler } from './Route'
 
 export interface Routes {
   add: (path: string, handler: RouteHandler) => void

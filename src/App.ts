@@ -1,4 +1,4 @@
-import cloud, {HandlerContext, HandlerEvent, HandlerEventTypes} from 'wx-server-sdk'
+import cloud, { HandlerContext, HandlerEvent, HandlerEventTypes } from 'wx-sdk'
 import { Container } from './Container'
 import {
   App as AppInterface,

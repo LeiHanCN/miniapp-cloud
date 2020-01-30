@@ -1,6 +1,6 @@
 import Route from './Route'
 import { RouteHandler, Routes as RoutesInterface } from '../types'
-import {NativeHandlerOptions} from "wx-server-sdk";
+import { NativeHandlerOptions } from "wx-sdk";
 
 export default class Routes implements RoutesInterface {
   protected $routeMap = new Map<string, Route>()

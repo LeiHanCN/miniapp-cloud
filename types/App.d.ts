@@ -1,5 +1,5 @@
 import { RouteHandler } from './Route'
-import { HandlerContext, HandlerEvent } from 'wx-server-sdk'
+import { HandlerContext, HandlerEvent } from 'wx-sdk'
 
 type AppConstructorOptions =
   | string
@@ -10,7 +10,7 @@ type AppConstructorOptions =
     }
 
 interface App {
-  new (env?: AppConstructorOptions): App
+  new?(env?: AppConstructorOptions): App
   route: (path: string, handler: RouteHandler) => void
   handle: (event: HandlerEvent, context: HandlerContext) => void
 }
