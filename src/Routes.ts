@@ -1,6 +1,5 @@
 import Route from './Route'
-import { RouteHandler, Routes as RoutesInterface } from '../types'
-import { NativeHandlerOptions } from 'wx-server-sdk';
+import { RouteHandler, Routes as RoutesInterface, RouteHandlerNativeOptions } from '../types'
 
 export default class Routes implements RoutesInterface {
   protected $routeMap = new Map<string, Route>()
@@ -9,7 +8,7 @@ export default class Routes implements RoutesInterface {
     this.$routeMap.set(path, new Route(handler))
   }
 
-  async dispatch(nativeHandlerOptions: NativeHandlerOptions) {
+  async dispatch(nativeHandlerOptions: RouteHandlerNativeOptions) {
     const { event:{ $api }} = nativeHandlerOptions
     await this.$routeMap.get($api)?.run(nativeHandlerOptions)
   };

@@ -1,10 +1,13 @@
-import { RouteHandler, Route as RouteInterface } from '../types'
-import { NativeHandlerOptions } from 'wx-server-sdk'
+import {
+  RouteHandler,
+  Route as RouteInterface,
+  RouteHandlerNativeOptions
+} from '../types'
 
 export default class Route implements RouteInterface {
   constructor(protected $handler: RouteHandler) {}
 
-  async run({ event, context }: NativeHandlerOptions) {
+  async run({ event, context }: RouteHandlerNativeOptions) {
     this.$handler(event, context)
   }
 }

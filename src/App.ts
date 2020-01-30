@@ -1,9 +1,12 @@
-import cloud, { HandlerContext, HandlerEvent, HandlerEventTypes } from 'wx-server-sdk'
+import cloud from 'wx-server-sdk'
 import { Container } from './Container'
 import {
   App as AppInterface,
   AppConstructorOptions,
-  RouteHandler
+  RouteHandler,
+  RouteHandlerContext,
+  RouteHandlerEvent,
+  RouteHandlerEventTypes
 } from '../types'
 import Routes from './Routes'
 
@@ -26,9 +29,9 @@ export class App implements AppInterface {
     this.$routes.add(path, handler)
   }
 
-  async handle(event: HandlerEvent, context: HandlerContext) {
+  async handle(event: RouteHandlerEvent, context: RouteHandlerContext) {
     switch (event.type) {
-      case HandlerEventTypes.TIMER:
+      case RouteHandlerEventTypes.TIMER:
         // do something schedule task.
         break
       default:
