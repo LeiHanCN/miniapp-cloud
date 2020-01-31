@@ -2,9 +2,12 @@
 微信小程序云开发框架
 
 ### 用法
-```typescript
-// 初始化
-const app = new (require('miniapp-cloud'))()
+```js
+// 引包
+import App from 'miniapp-cloud' 
+
+// 或者使用 require
+const app = App()
 
 // 添加路由
 app.route('user', (event, context) => {
@@ -12,5 +15,5 @@ app.route('user', (event, context) => {
 })
 
 // 接入
-module.exports = app.handle
+module.exports = (event, context) => app.handle(event, context)
 ```
