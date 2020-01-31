@@ -9,7 +9,7 @@ type AppConstructorOptions =
     }
 
 interface App {
-  route: (path: string, handler: TRouteHandler = RouteHandler) => void
+  route: (path: string, handler: RouteHandler<any, any>) => void
   handle: (event: RouteHandlerEvent, context: RouteHandlerContext) => void
 }
 interface AppConstructor {
