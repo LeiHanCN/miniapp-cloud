@@ -11,9 +11,12 @@ export interface RouteHandlerNativeOptions {
   event: RouteHandlerEvent
   context: RouteHandlerContext
 }
-export type RouteHandler = (
-  event: RouteHandlerEvent,
-  context: RouteHandlerContext
+export type RouteHandler = <
+  TEvent extends RouteHandlerEvent = RouteHandlerEvent,
+  TContext extends RouteHandlerContext = RouteHandlerContext
+>(
+  event: TEvent,
+  context: TContext
 ) => void
 
 export interface Route {
