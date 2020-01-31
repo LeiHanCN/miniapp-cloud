@@ -7,7 +7,7 @@ import {
 export default class Route implements RouteInterface {
   constructor(protected $handler: RouteHandler) {}
 
-  run({ event, context }: RouteHandlerNativeOptions) {
-    this.$handler(event, context)
+  async run({ event, context }: RouteHandlerNativeOptions) {
+    await this.$handler(event, context)
   }
 }
