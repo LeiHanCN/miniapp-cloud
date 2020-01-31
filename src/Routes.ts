@@ -8,8 +8,8 @@ export default class Routes implements RoutesInterface {
     this.$routeMap.set(path, new Route(handler))
   }
 
-  async dispatch(nativeHandlerOptions: RouteHandlerNativeOptions) {
+  dispatch(nativeHandlerOptions: RouteHandlerNativeOptions) {
     const { event:{ $api }} = nativeHandlerOptions
-    await this.$routeMap.get($api)?.run(nativeHandlerOptions)
+    this.$routeMap.get($api)?.run(nativeHandlerOptions)
   };
 }

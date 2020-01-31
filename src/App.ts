@@ -29,7 +29,7 @@ export default class App implements AppInterface {
     this.$routes.add(path, handler)
   }
 
-  async handle(event: RouteHandlerEvent, context: RouteHandlerContext) {
+  handle(event: RouteHandlerEvent, context: RouteHandlerContext) {
     if (event.type === RouteHandlerEventTypes.TIMER) {
       console.log(`> 执行定时任务：${event}`)
       // @todo 定时任务
@@ -39,6 +39,6 @@ export default class App implements AppInterface {
     console.group(`> 执行 API：${event.$api}`)
     console.log('> event: ', event, ' context: ', context)
     console.groupEnd()
-    await this.$routes.dispatch({ event, context })
+    this.$routes.dispatch({ event, context })
   }
 }
