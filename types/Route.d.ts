@@ -14,8 +14,8 @@ export interface RouteHandlerNativeOptions {
 export type RouteHandler<
   TEvent extends RouteHandlerEvent = RouteHandlerEvent,
   TContext extends RouteHandlerContext = RouteHandlerContext
-> = (event: TEvent, context: TContext) => void
+> = (event: TEvent, context: TContext) => any
 
 export interface Route {
-  run: (nativeHandlerOptions: RouteHandlerNativeOptions) => void
+  run: (nativeHandlerOptions: RouteHandlerNativeOptions) => any
 }

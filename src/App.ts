@@ -39,6 +39,6 @@ export default class App implements AppInterface {
     console.group(`> 执行 API：${event.$api}`)
     console.log('> event: ', event, ' context: ', context)
     console.groupEnd()
-    await this.$routes.dispatch({ event, context })
+    return await this.$routes.dispatch({ event, context })
   }
 }

@@ -8,6 +8,6 @@ export default class Route implements RouteInterface {
   constructor(protected $handler: RouteHandler) {}
 
   async run({ event, context }: RouteHandlerNativeOptions) {
-    await this.$handler(event, context)
+    return await this.$handler(event, context)
   }
 }
